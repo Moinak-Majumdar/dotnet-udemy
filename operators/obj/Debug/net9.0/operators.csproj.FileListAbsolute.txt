@@ -1,0 +1,15 @@
+M:\My programs\dotNet\udemy course\operators\bin\Debug\net9.0\operators.exe
+M:\My programs\dotNet\udemy course\operators\bin\Debug\net9.0\operators.deps.json
+M:\My programs\dotNet\udemy course\operators\bin\Debug\net9.0\operators.runtimeconfig.json
+M:\My programs\dotNet\udemy course\operators\bin\Debug\net9.0\operators.dll
+M:\My programs\dotNet\udemy course\operators\bin\Debug\net9.0\operators.pdb
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.GeneratedMSBuildEditorConfig.editorconfig
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.AssemblyInfoInputs.cache
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.AssemblyInfo.cs
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.csproj.CoreCompileInputs.cache
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.sourcelink.json
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.dll
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\refint\operators.dll
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.pdb
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\operators.genruntimeconfig.cache
+M:\My programs\dotNet\udemy course\operators\obj\Debug\net9.0\ref\operators.dll
