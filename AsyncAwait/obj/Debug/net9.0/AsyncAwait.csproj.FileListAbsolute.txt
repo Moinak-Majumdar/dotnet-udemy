@@ -1,0 +1,15 @@
+M:\My programs\dotNet\udemy course\AsyncAwait\bin\Debug\net9.0\AsyncAwait.exe
+M:\My programs\dotNet\udemy course\AsyncAwait\bin\Debug\net9.0\AsyncAwait.deps.json
+M:\My programs\dotNet\udemy course\AsyncAwait\bin\Debug\net9.0\AsyncAwait.runtimeconfig.json
+M:\My programs\dotNet\udemy course\AsyncAwait\bin\Debug\net9.0\AsyncAwait.dll
+M:\My programs\dotNet\udemy course\AsyncAwait\bin\Debug\net9.0\AsyncAwait.pdb
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.GeneratedMSBuildEditorConfig.editorconfig
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.AssemblyInfoInputs.cache
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.AssemblyInfo.cs
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.csproj.CoreCompileInputs.cache
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.sourcelink.json
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.dll
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\refint\AsyncAwait.dll
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.pdb
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\AsyncAwait.genruntimeconfig.cache
+M:\My programs\dotNet\udemy course\AsyncAwait\obj\Debug\net9.0\ref\AsyncAwait.dll
