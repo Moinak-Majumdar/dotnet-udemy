@@ -1,0 +1,33 @@
+[
+    {
+      "ComputerId": 1,
+      "Motherboard": "B760",
+      "CPUCores": 16,
+      "HasWifi": true,
+      "HasLTE": false,
+      "ReleaseDate": "2025-03-26T00:00:00.000Z",
+      "Price": 130000.0,
+      "VideoCard": "RTX4070Super"
+    },
+    {
+      "ComputerId": 2,
+      "Motherboard": "B650M",
+      "CPUCores": 6,
+      "HasWifi": true,
+      "HasLTE": true,
+      "ReleaseDate": "2025-03-27T00:00:00.000Z",
+      "Price": 100000.0,
+      "VideoCard": "RTX4060Ti"
+    },
+    {
+      "ComputerId": 3,
+      "Motherboard": "PROX670-PWIFI",
+      "CPUCores": 6,
+      "HasWifi": true,
+      "HasLTE": true,
+      "ReleaseDate": "2025-03-27T00:00:00.000Z",
+      "Price": 200000.0,
+      "VideoCard": "RTX4070Ti"
+    }
+  ]
+  
