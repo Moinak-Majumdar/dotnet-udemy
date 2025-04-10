@@ -2,7 +2,7 @@ using System.Data.Common;
 using Dapper;
 using Microsoft.Data.SqlClient;
 
-namespace hello_api
+namespace hello_api.context
 {
 
     class DapperContext(IConfiguration config)

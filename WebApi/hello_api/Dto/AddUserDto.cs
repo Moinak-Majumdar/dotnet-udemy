@@ -1,8 +1,7 @@
-namespace hello_api.models
+namespace hello_api.Dto
 {
-    public partial class User
+    public class AddUserDto
     {
-        public long UserId { get; set; }
         public string FirstName { get; set; } = "";
         public string LastName { get; set; } = "";
         public string Email { get; set; } = "";

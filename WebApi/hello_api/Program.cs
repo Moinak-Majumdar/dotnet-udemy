@@ -1,7 +1,7 @@
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Hosting.Server.Features;
+
 var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-// builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -32,11 +32,24 @@ else
 app.MapControllers();
 
 
+app.MapGet("/", (HttpContext context) =>
+{
+     var addresses = context.RequestServices
+        .GetService<IServer>()?
+        .Features.Get<IServerAddressesFeature>()?
+        .Addresses.ToList();
 
-// app.MapGet("/weatherforecast", () =>
-// {
-// })
-// .WithName("GetWeatherForecast");
+
+    var data = new Dictionary<string, string> {
+        { "Hello World", "Server Connected" },
+        {"Dev Swagger", addresses != null ? addresses[0] + "/swagger": "Unknown"},
+        // {"Prod Swagger", addresses != null ? addresses[1] + "/swagger": "Unknown"},
+
+    };
+    Console.WriteLine(app.Urls);
+
+    return Results.Json(data);
+});
 
 app.Run();
 
