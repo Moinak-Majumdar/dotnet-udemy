@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="dapper" Version="2.1.66" />
+    <PackageReference Include="microsoft.data.sqlclient" Version="6.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
   </ItemGroup>
 
