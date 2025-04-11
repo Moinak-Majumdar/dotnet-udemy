@@ -39,7 +39,7 @@ public class UserController(IConfiguration config) : ControllerBase
         string sql = @"Insert into TblUsers (FirstName, LastName, Email, Gender, IsActive) values"
             + "('" + u.FirstName + "', '" + u.LastName + "', '" + u.Email + "', '" + u.Gender + "', '" + u.IsActive + "');";
 
-        Console.WriteLine(sql);
+        // Console.WriteLine(sql);
 
         bool res = _dapper.ExecuteSql(sql);
 
