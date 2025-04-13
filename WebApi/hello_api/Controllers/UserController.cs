@@ -23,11 +23,18 @@ public class UserController(IConfiguration config) : ControllerBase
 
 
     [HttpGet("getById/{userId}")]
-    public User GetUser(long userId)
+    public object GetUser(long userId)
     {
-        string sql = "select * from TblUsers where UserId =" + userId;
+        string sql = @"
+            select 
+                u.UserId, [FirstName], [LastName], [Email], [Gender], [IsActive], 
+                j.Department as Department,  j.JobTitle as JobTitle,  j.Salary as Salary,
+                [IsDeleted] 
+            from TblUsers as U
+            join TblJobInfo as J on u.UserId = j.UserId
+            where u.UserId = " + userId;
 
-        User u = _dapper.LoadDataSingle<User>(sql);
+        object u = _dapper.LoadDataSingle<object>(sql);
 
         return u;
     }
@@ -36,12 +43,31 @@ public class UserController(IConfiguration config) : ControllerBase
     [HttpPost("addUser")]
     public IActionResult AddUser(AddUserDto u)
     {
-        string sql = @"Insert into TblUsers (FirstName, LastName, Email, Gender, IsActive) values"
-            + "('" + u.FirstName + "', '" + u.LastName + "', '" + u.Email + "', '" + u.Gender + "', '" + u.IsActive + "');";
+        string sql = @"
+        DECLARE @UserId BIGINT;
 
-        // Console.WriteLine(sql);
+        INSERT INTO TblUsers (FirstName, LastName, Email, Gender, IsActive)
+        VALUES (@FirstName, @LastName, @Email, @Gender, @IsActive);
 
-        bool res = _dapper.ExecuteSql(sql);
+        SET @UserId = SCOPE_IDENTITY();
+
+        INSERT INTO TblJobInfo (UserId, Department, JobTitle, Salary)
+        VALUES (@UserId, @Department, @JobTitle, @Salary);
+    ";
+
+        var parameters = new
+        {
+            u.FirstName,
+            u.LastName,
+            u.Email,
+            u.Gender,
+            u.IsActive,
+            u.Department,
+            u.JobTitle,
+            u.Salary
+        };
+
+        bool res = _dapper.ExecuteWithParams(sql, parameters);
 
         if (res)
         {

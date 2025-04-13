@@ -26,6 +26,18 @@ namespace hello_api.context
             DbConnection con = new SqlConnection(_dbCon);
             return con.Execute(sql) > 0;
         }
+
+        public int ExecuteSqlWithRowCount(string sql)
+        {
+            DbConnection con = new SqlConnection(_dbCon);
+            return con.Execute(sql);
+        }
+
+        public bool ExecuteWithParams(string sql, object param)
+        {
+            DbConnection con = new SqlConnection(_dbCon);
+            return con.Execute(sql, param) > 0;
+        }
     }
 
 }
