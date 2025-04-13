@@ -86,5 +86,3 @@ M:\My programs\dotNet\udemy course\WebApi\hello_api\bin\Debug\net9.0\Microsoft.E
 M:\My programs\dotNet\udemy course\WebApi\hello_api\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 M:\My programs\dotNet\udemy course\WebApi\hello_api\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 M:\My programs\dotNet\udemy course\WebApi\hello_api\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
-M:\My programs\dotNet\udemy course\WebApi\hello_api\bin\Debug\net9.0\System.Formats.Asn1.dll
-M:\My programs\dotNet\udemy course\WebApi\hello_api\bin\Debug\net9.0\System.Text.Json.dll

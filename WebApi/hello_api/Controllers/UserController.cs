@@ -1,6 +1,6 @@
 using hello_api.context;
-using hello_api.Dto;
 using hello_api.models;
+using hello_api.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace hello_api.Controllers;
@@ -41,7 +41,7 @@ public class UserController(IConfiguration config) : ControllerBase
 
 
     [HttpPost("addUser")]
-    public IActionResult AddUser(AddUserDto u)
+    public IActionResult AddUser(UserDto u)
     {
         string sql = @"
         DECLARE @UserId BIGINT;
@@ -78,17 +78,38 @@ public class UserController(IConfiguration config) : ControllerBase
     }
 
     [HttpPost("updateUser")]
-    public IActionResult UpdateUser(User u)
+    public IActionResult UpdateUser(UserDto u)
     {
-        string sql = @"Update TblUsers set " +
-        "FirstName = '" + u.FirstName + "', " +
-        "LastName= '" + u.LastName + "', " +
-        "Email= '" + u.Email + "', " +
-        "Gender= '" + u.Gender + "', " +
-        "IsActive= '" + u.IsActive + "'" +
-        "Where UserId = " + u.UserId;
+        string sql = @"
+            UPDATE TblUsers set 
+                FirstName = @firstName,
+                LastName = @LastName,
+                Email = @Email,
+                Gender = @Gender,
+                IsActive = @IsActive
+            where UserId = @UserId;
 
-        bool res = _dapper.ExecuteSql(sql);
+            UPDATE TblJobInfo SET
+                Department = @Department,
+                JobTitle = @JobTitle,
+                Salary = @Salary
+            WHERE UserId = @UserId
+        ";
+
+        object parameters = new
+        {
+            u.UserId,
+            u.FirstName,
+            u.LastName,
+            u.Email,
+            u.Gender,
+            u.IsActive,
+            u.Department,
+            u.JobTitle,
+            u.Salary
+        };
+
+        bool res = _dapper.ExecuteWithParams(sql, parameters);
 
         if (res)
         {
@@ -97,5 +118,23 @@ public class UserController(IConfiguration config) : ControllerBase
 
         throw new Exception("Unable to update user");
 
+    }
+
+    [HttpDelete("deleteUser/${userId}")]
+    public IActionResult DeleteUser(long userId)
+    {
+        string sql = @"
+            Update TblUsers set IsDeleted = 1
+            where UserId = 
+        " + userId;
+
+        bool res = _dapper.ExecuteSql(sql);
+
+        if (res)
+        {
+            return Ok();
+        }
+
+        throw new Exception("Failed to delete user");
     }
 }

@@ -18,7 +18,7 @@ namespace hello_api.Controllers
         {
             _ef = new EFContext(config);
             _mapper = new Mapper(new MapperConfiguration(cfg =>{
-                cfg.CreateMap<AddUserDto, User>();
+                cfg.CreateMap<UserDto, User>();
             }));
         }
 
@@ -71,7 +71,7 @@ namespace hello_api.Controllers
         }
 
         [HttpPost("addUser")]
-        public IActionResult AddUser(AddUserDto u)
+        public IActionResult AddUser(UserDto u)
         {
             User dbUser = _mapper.Map<User>(u);
             _ef.Add(dbUser);

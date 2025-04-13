@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Hosting.Server;
-using Microsoft.AspNetCore.Hosting.Server.Features;
+// using Microsoft.AspNetCore.Hosting.Server;
+// using Microsoft.AspNetCore.Hosting.Server.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -33,24 +33,24 @@ app.MapControllers();
 
 
 
-app.MapGet("/", (HttpContext context) =>
-{
-     var addresses = context.RequestServices
-        .GetService<IServer>()?
-        .Features.Get<IServerAddressesFeature>()?
-        .Addresses.ToList();
+// app.MapGet("/", (HttpContext context) =>
+// {
+//      var addresses = context.RequestServices
+//         .GetService<IServer>()?
+//         .Features.Get<IServerAddressesFeature>()?
+//         .Addresses.ToList();
 
 
-    var data = new Dictionary<string, string> {
-        { "Hello World", "Server Connected" },
-        {"Dev Swagger", addresses != null ? addresses[0] + "/swagger": "Unknown"},
-        // {"Prod Swagger", addresses != null ? addresses[1] + "/swagger": "Unknown"},
+//     var data = new Dictionary<string, string> {
+//         { "Hello World", "Server Connected" },
+//         {"Dev Swagger", addresses != null ? addresses[0] + "/swagger": "Unknown"},
+//         // {"Prod Swagger", addresses != null ? addresses[1] + "/swagger": "Unknown"},
 
-    };
-    Console.WriteLine(app.Urls);
+//     };
 
-    return Results.Json(data);
-});
+
+//     return Results.Json(data);
+// });
 
 app.Run();
 
