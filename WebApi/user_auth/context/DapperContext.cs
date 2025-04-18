@@ -16,10 +16,10 @@ namespace user_auth.context
             return await con.QueryAsync<T>(sql);
         }
 
-        public T LoadDataSingle<T>(string sql)
+        public async Task<T?> LoadDataSingle<T>(string sql)
         {
             DbConnection con = new SqlConnection(_dbCon);
-            return con.QuerySingle<T>(sql);
+            return await con.QuerySingleOrDefaultAsync<T>(sql);
         }
 
         public async Task<bool> ExecuteSql(string sql)
