@@ -73,3 +73,4 @@ M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\refint\user
 M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\user_auth.pdb
 M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\user_auth.genruntimeconfig.cache
 M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\ref\user_auth.dll
+M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

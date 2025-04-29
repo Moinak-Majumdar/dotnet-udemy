@@ -1,4 +1,5 @@
 using System.Security.Cryptography;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using user_auth.context;
 using user_auth.Dto;
@@ -7,12 +8,14 @@ using user_auth.models;
 
 namespace user_auth.controller
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class AuthController(IConfiguration config) : ControllerBase
     {
         private readonly DapperContext _dapper = new(config);
         private readonly PasswordHelper _ph = new(config);
+        private readonly JwtHelper _jwtHelper = new(config);
 
         [HttpPost("Register")]
         public async Task<IActionResult> UserRegister(UserRegisterDto ur)
@@ -99,7 +102,18 @@ namespace user_auth.controller
 
                 if (passwordHash.SequenceEqual(dbUser.PasswordHash))
                 {
-                    return Ok(new { message = "Welcome " + dbUser.FirstName + " " + dbUser.LastName + "!!" });
+                    User user = new() {
+                        UserId = dbUser.UserId,
+                        FirstName = dbUser.FirstName,
+                        LastName = dbUser.LastName,
+                        Email = dbUser.Email
+                    };
+                    string token = _jwtHelper.CreateJwtToken(user);
+                    return Ok(new
+                    {
+                        message = "Welcome " + dbUser.FirstName + " " + dbUser.LastName + "!!",
+                        token
+                    });
                 }
                 else
                 {
