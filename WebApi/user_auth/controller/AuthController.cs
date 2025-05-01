@@ -1,6 +1,7 @@
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using user_auth.context;
 using user_auth.Dto;
 using user_auth.helper;
@@ -17,6 +18,8 @@ namespace user_auth.controller
         private readonly PasswordHelper _ph = new(config);
         private readonly JwtHelper _jwtHelper = new(config);
 
+
+        [AllowAnonymous]
         [HttpPost("Register")]
         public async Task<IActionResult> UserRegister(UserRegisterDto ur)
         {
@@ -70,6 +73,7 @@ namespace user_auth.controller
             return BadRequest(new { errorMessage = "Failed to create user." });
         }
 
+        [AllowAnonymous]
         [HttpPost("Login")]
         public async Task<IActionResult> UserLogin(UserLoginDto ul)
         {
@@ -102,7 +106,8 @@ namespace user_auth.controller
 
                 if (passwordHash.SequenceEqual(dbUser.PasswordHash))
                 {
-                    User user = new() {
+                    User user = new()
+                    {
                         UserId = dbUser.UserId,
                         FirstName = dbUser.FirstName,
                         LastName = dbUser.LastName,
@@ -122,6 +127,8 @@ namespace user_auth.controller
             }
         }
 
+
+        [AllowAnonymous]
         [HttpPost("ResetPassword")]
         public async Task<IActionResult> ResetPassword(UserLoginDto ul)
         {

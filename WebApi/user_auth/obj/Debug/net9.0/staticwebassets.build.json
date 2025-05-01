@@ -1,12 +1,362 @@
 {
   "Version": 1,
-  "Hash": "hX4/BCq/BsPi/Ixdv7JQ44tFMHkIp2SM26x6ZN3t03s=",
+  "Hash": "M1lBS+8lYTkykbgG9chm88O4sLNWr/I4ugySHhmhVpw=",
   "Source": "user_auth",
   "BasePath": "_content/user_auth",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "user_auth\\wwwroot",
+      "Source": "user_auth",
+      "ContentRoot": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\",
+      "BasePath": "_content/user_auth",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "SourceId": "user_auth",
+      "SourceType": "Discovered",
+      "ContentRoot": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/user_auth",
+      "RelativePath": "swagger/index#[.{fingerprint=uuzkgdbyvg}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "icvxuq0n6l",
+      "Integrity": "Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html"
+    },
+    {
+      "Identity": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html",
+      "SourceId": "user_auth",
+      "SourceType": "Discovered",
+      "ContentRoot": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\",
+      "BasePath": "_content/user_auth",
+      "RelativePath": "swagger/index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uuzkgdbyvg",
+      "Integrity": "enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\swagger\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "swagger/index.html",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000618811881"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1615"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/index.html",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5275"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/index.html.gz",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1615"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/index.uuzkgdbyvg.html",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000618811881"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1615"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uuzkgdbyvg"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/index.uuzkgdbyvg.html",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5275"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uuzkgdbyvg"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/index.uuzkgdbyvg.html.gz",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1615"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uuzkgdbyvg"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw="
+        }
+      ]
+    }
+  ]
 }

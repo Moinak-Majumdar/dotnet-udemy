@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/user_auth/swagger/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5275"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 18:59:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/user_auth/swagger/index.uuzkgdbyvg.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uuzkgdbyvg"},{"Name":"integrity","Value":"sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="},{"Name":"label","Value":"_content/user_auth/swagger/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5275"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 18:59:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

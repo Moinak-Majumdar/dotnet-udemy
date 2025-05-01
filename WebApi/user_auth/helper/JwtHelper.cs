@@ -18,17 +18,19 @@ namespace user_auth.helper
             ];
 
             JWtSettings? jwtSettings = config.GetSection("Jwt").Get<JWtSettings>();
-            SymmetricSecurityKey tokenKey = new(Encoding.UTF8.GetBytes(jwtSettings != null ? jwtSettings.TokenKey : ""));
-
-            DateTime expire = DateTime.Now.AddMinutes(jwtSettings != null ? jwtSettings.ExpInMin : 60);
+            SymmetricSecurityKey tokenKey = new(Encoding.UTF8.GetBytes(jwtSettings?.TokenKey ?? ""));
 
             SigningCredentials credentials = new(tokenKey, SecurityAlgorithms.HmacSha512Signature);
+
+            DateTime now = DateTime.Now;
 
             SecurityTokenDescriptor descriptor = new()
             {
                 Subject = new ClaimsIdentity(claims),
                 SigningCredentials = credentials,
-                Expires = expire
+                NotBefore = now,
+                IssuedAt = now,
+                Expires = now.AddMinutes(jwtSettings?.ExpInMin ?? 60),
             };
 
             JwtSecurityTokenHandler tokenHandler = new();

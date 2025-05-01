@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Auth Project</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        #login-form {
+            padding: 10px;
+            background-color: #1b1b1b;
+            display: flex;
+            gap: 10px;
+            align-items: start;
+        }
+
+        #email,
+        #password {
+            font-size: 16px;
+            padding: 8px;
+            border: 2px solid rgb(98, 160, 63);
+            border-radius: 4px;
+        }
+
+        #login-button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            background-color: rgb(98, 160, 63);
+            border-radius: 4px;
+        }
+
+        .password-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .password-wrapper input {
+            padding-right: 30px;
+            /* Space for the eye icon */
+            font-size: 14px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 8px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        #login-status {
+            margin-block: auto;
+            font-weight: 700;
+            color: deeppink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-form">
+        <input id="email" type="email" placeholder="Email Id" />
+        <div class="password-wrapper">
+            <input id="password" type="password" placeholder="Password" />
+            <span id="toggle-password" class="eye-icon">👁️</span>
+        </div>
+        <button id="login-button">Login</button>
+        <span id="login-status"></span>
+    </div>
+
+    <div id="swagger-ui"></div>
+
+    <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-standalone-preset.js"></script>
+    <!-- <script src="index.js"></script> -->
+
+    <script>
+        document.getElementById('toggle-password').addEventListener('click', () => {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('toggle-password');
+            const isPassword = passwordInput.type === 'password';
+
+            passwordInput.type = isPassword ? 'text' : 'password';
+            eyeIcon.textContent = isPassword ? '🙈' : '👁️'; // toggle icon
+        });
+
+
+        let ui;
+
+        document.getElementById('login-button').addEventListener('click', async () => {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const status = document.getElementById("login-status");
+
+
+            try {
+                if (!email) {
+                    throw new Error("Email is required.");
+                }
+
+                if (!password) {
+                    throw new Error("Password is required.");
+                }
+
+                status.textContent = "Logging in...";
+
+                const response = await fetch("/Auth/Login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ email, password }) // 🔁 Customize if needed
+                });
+
+                const data = await response.json();
+                if (!response.ok) {
+                    console.log(data.errorMessage)
+                    throw new Error("Login failed");
+                }
+
+                const token = data.token; // 🔁 Adjust if your token key is different
+
+                localStorage.setItem("token", token)
+
+                status.style.color = 'rebeccapurple'
+                status.textContent = "Login successful";
+                setTimeout(() => {
+                    status.textContent = '';
+                }, 3000)
+                ui.preauthorizeApiKey("Bearer", token);
+
+            } catch (err) {
+                status.textContent = err;
+                setTimeout(() => {
+                    status.textContent = '';
+                }, 3000)
+            }
+        })
+
+
+        // Initialize Swagger without token first
+        window.onload = () => {
+            const token = localStorage.getItem('token')
+            ui = SwaggerUIBundle({
+                url: '/swagger/v1/swagger.json',
+                dom_id: '#swagger-ui',
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                layout: "StandaloneLayout",
+                onComplete: function () {
+                    if (token) {
+                        ui.preauthorizeApiKey("Bearer", token);
+                    }
+                }
+            });
+
+            window.ui = ui;
+        };
+    </script>
+</body>
+
+</html>
