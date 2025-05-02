@@ -75,4 +75,4 @@ M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\user_auth.g
 M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\ref\user_auth.dll
 M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\user_auth.staticwebassets.runtime.json
-M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\compressed\hmmdpl11e0-uuzkgdbyvg.gz
+M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\compressed\hmmdpl11e0-nrelghgkqx.gz

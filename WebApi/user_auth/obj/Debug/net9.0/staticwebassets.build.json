@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "M1lBS+8lYTkykbgG9chm88O4sLNWr/I4ugySHhmhVpw=",
+  "Hash": "LXnqch/l17lvOMAIvPczfv4e+tK/IJfFRAzXH6oWyJY=",
   "Source": "user_auth",
   "BasePath": "_content/user_auth",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "Identity": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-nrelghgkqx.gz",
       "SourceId": "user_auth",
       "SourceType": "Discovered",
       "ContentRoot": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/user_auth",
-      "RelativePath": "swagger/index#[.{fingerprint=uuzkgdbyvg}]?.html.gz",
+      "RelativePath": "swagger/index#[.{fingerprint=nrelghgkqx}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -31,8 +31,8 @@
       "RelatedAsset": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "icvxuq0n6l",
-      "Integrity": "Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=",
+      "Fingerprint": "guoy8pfhl9",
+      "Integrity": "uBGTTG6yUQOnubNWFGDQIV3nJd92T6MXOjPWInPgNkg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uuzkgdbyvg",
-      "Integrity": "enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=",
+      "Fingerprint": "nrelghgkqx",
+      "Integrity": "/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\swagger\\index.html"
@@ -62,12 +62,12 @@
   "Endpoints": [
     {
       "Route": "swagger/index.html",
-      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-nrelghgkqx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000618811881"
+          "Quality": "0.000611246944"
         }
       ],
       "ResponseHeaders": [
@@ -77,15 +77,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1615"
+          "Value": "1635"
         },
         {
           "Name": "ETag",
-          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+          "Value": "\"uBGTTG6yUQOnubNWFGDQIV3nJd92T6MXOjPWInPgNkg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+          "Value": "Thu, 01 May 2025 19:35:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -105,13 +105,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+          "Value": "W/\"/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+          "Value": "sha256-/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c="
         }
       ]
     },
@@ -126,7 +126,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5275"
+          "Value": "5360"
         },
         {
           "Name": "Content-Type",
@@ -134,11 +134,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+          "Value": "\"/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+          "Value": "Thu, 01 May 2025 19:35:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -148,13 +148,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+          "Value": "sha256-/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c="
         }
       ]
     },
     {
       "Route": "swagger/index.html.gz",
-      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-nrelghgkqx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -163,7 +163,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1615"
+          "Value": "1635"
         },
         {
           "Name": "Content-Type",
@@ -171,11 +171,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+          "Value": "\"uBGTTG6yUQOnubNWFGDQIV3nJd92T6MXOjPWInPgNkg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+          "Value": "Thu, 01 May 2025 19:35:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -193,18 +193,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw="
+          "Value": "sha256-uBGTTG6yUQOnubNWFGDQIV3nJd92T6MXOjPWInPgNkg="
         }
       ]
     },
     {
-      "Route": "swagger/index.uuzkgdbyvg.html",
-      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "Route": "swagger/index.nrelghgkqx.html",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-nrelghgkqx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000618811881"
+          "Quality": "0.000611246944"
         }
       ],
       "ResponseHeaders": [
@@ -214,15 +214,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1615"
+          "Value": "1635"
         },
         {
           "Name": "ETag",
-          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+          "Value": "\"uBGTTG6yUQOnubNWFGDQIV3nJd92T6MXOjPWInPgNkg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+          "Value": "Thu, 01 May 2025 19:35:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -242,13 +242,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+          "Value": "W/\"/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uuzkgdbyvg"
+          "Value": "nrelghgkqx"
         },
         {
           "Name": "label",
@@ -256,12 +256,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+          "Value": "sha256-/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c="
         }
       ]
     },
     {
-      "Route": "swagger/index.uuzkgdbyvg.html",
+      "Route": "swagger/index.nrelghgkqx.html",
       "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -271,7 +271,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5275"
+          "Value": "5360"
         },
         {
           "Name": "Content-Type",
@@ -279,11 +279,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ=\""
+          "Value": "\"/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+          "Value": "Thu, 01 May 2025 19:35:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -293,7 +293,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uuzkgdbyvg"
+          "Value": "nrelghgkqx"
         },
         {
           "Name": "label",
@@ -301,13 +301,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-enlDwfM1VG/GK3eXCKJhM4tQWzHc5PU43L1K7H/JtCQ="
+          "Value": "sha256-/c01jzbFthKI2AK1P8HAzmYjYTOO87AMO0Ga8UCzU2c="
         }
       ]
     },
     {
-      "Route": "swagger/index.uuzkgdbyvg.html.gz",
-      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-uuzkgdbyvg.gz",
+      "Route": "swagger/index.nrelghgkqx.html.gz",
+      "AssetFile": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\obj\\Debug\\net9.0\\compressed\\hmmdpl11e0-nrelghgkqx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -316,7 +316,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1615"
+          "Value": "1635"
         },
         {
           "Name": "Content-Type",
@@ -324,11 +324,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw=\""
+          "Value": "\"uBGTTG6yUQOnubNWFGDQIV3nJd92T6MXOjPWInPgNkg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:59:35 GMT"
+          "Value": "Thu, 01 May 2025 19:35:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -346,7 +346,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uuzkgdbyvg"
+          "Value": "nrelghgkqx"
         },
         {
           "Name": "label",
@@ -354,7 +354,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Dp1g4+ILi0XrEfFIWRpH2Uq+PHM1y4ehMyHv7DW2ugw="
+          "Value": "sha256-uBGTTG6yUQOnubNWFGDQIV3nJd92T6MXOjPWInPgNkg="
         }
       ]
     }

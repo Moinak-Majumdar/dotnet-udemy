@@ -20,14 +20,16 @@
         }
 
         #email,
-        #password {
+        #password,
+        #token {
             font-size: 16px;
             padding: 8px;
             border: 2px solid rgb(98, 160, 63);
             border-radius: 4px;
         }
 
-        #login-button {
+        #login-button,
+        #use-token {
             padding: 8px 16px;
             font-size: 16px;
             cursor: pointer;
@@ -70,6 +72,8 @@
 
 <body>
     <div id="login-form">
+        <input id="token" type="text" placeholder="JWT Token" />
+        <button id="use-token">Authorize</button>
         <input id="email" type="email" placeholder="Email Id" />
         <div class="password-wrapper">
             <input id="password" type="password" placeholder="Password" />
@@ -97,12 +101,13 @@
 
 
         let ui;
+        const statusText = document.getElementById("login-status");
+        const useToken = document.getElementById('use-token')
+        const tokenInput = document.getElementById('token')
 
         document.getElementById('login-button').addEventListener('click', async () => {
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
-            const status = document.getElementById("login-status");
-
 
             try {
                 if (!email) {
@@ -132,19 +137,44 @@
                 const token = data.token; // 🔁 Adjust if your token key is different
 
                 localStorage.setItem("token", token)
+                tokenInput.value = token;
+                useToken.innerText = 'Unauthorize';
 
-                status.style.color = 'rebeccapurple'
-                status.textContent = "Login successful";
-                setTimeout(() => {
-                    status.textContent = '';
-                }, 3000)
+                statusText.style.color = 'rebeccapurple'
+                statusText.textContent = "Login successful";
                 ui.preauthorizeApiKey("Bearer", token);
-
             } catch (err) {
-                status.textContent = err;
-                setTimeout(() => {
-                    status.textContent = '';
-                }, 3000)
+                statusText.textContent = err;
+            } finally {
+                clearStatusText()
+            }
+        });
+
+        useToken.addEventListener('click', () => {
+            try {
+                if (useToken.innerText.toLowerCase() === 'authorize') {
+                    if (!tokenInput.value) throw new Error("JWT is required.");
+
+                    localStorage.setItem('token', tokenInput.value)
+                    ui.preauthorizeApiKey("Bearer", tokenInput.value)
+                    useToken.innerText = 'Unauthorize'
+                    statusText.textContent = 'JWT token applied.'
+                } else if (useToken.innerText.toLowerCase() === 'unauthorize') {
+                    if (window.ui) {
+                        const auths = window.ui.getSystem().authActions;
+                        auths.logout('Bearer');
+                    }
+                    tokenInput.value = ''
+                    localStorage.removeItem('token')
+                    useToken.innerText = 'Authorize'
+                    statusText.textContent = 'Logged out'
+                } else {
+                    throw new Error("Don't mess with the button.");
+                }
+            } catch (error) {
+                statusText.textContent = error
+            } finally {
+                clearStatusText()
             }
         })
 
@@ -162,13 +192,21 @@
                 layout: "StandaloneLayout",
                 onComplete: function () {
                     if (token) {
-                        ui.preauthorizeApiKey("Bearer", token);
+                        tokenInput.value = token;
+                        useToken.click()
+                        // ui.preauthorizeApiKey("Bearer", token);
                     }
                 }
             });
 
             window.ui = ui;
         };
+
+        function clearStatusText() {
+            setTimeout(() => {
+                statusText.textContent = '';
+            }, 3000)
+        }
     </script>
 </body>
 
