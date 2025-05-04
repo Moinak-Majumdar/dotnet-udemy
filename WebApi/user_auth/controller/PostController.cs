@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using user_auth.context;
 using user_auth.Dto;
 using user_auth.models;
@@ -14,6 +15,26 @@ namespace user_auth.controller
     {
         private readonly DapperContext _dapper = new(config);
 
+        [HttpPost("ExecuteProcedure/{mode}")]
+        public async Task<IActionResult> ExecuteProcedure(string mode, [FromBody] Dictionary<string, dynamic> json)
+        {
+            int m = int.Parse(mode);
+
+            // Console.WriteLine("Json ===>" + json);
+
+            JsonOutput op = await _dapper.ExecuteSp(spName: "spTblPosts", mode: m, user: User, json);
+
+            if (op.Id == 1)
+            {
+                return StatusCode(op.StatusCode, new { response = op.Response });
+            }
+            else
+            {
+                return BadRequest(new { errorMessage = op.Response });
+            }
+        }
+
+
         [HttpGet("MyPosts")]
         public async Task<IActionResult> MyPostsAsync()
         {
@@ -24,7 +45,20 @@ namespace user_auth.controller
 
             IEnumerable<Post> posts = await _dapper.LoadData<Post>(sql);
 
-            return Ok(new { response = posts });
+            List<object> response = [];
+
+            foreach (Post p in posts)
+            {
+                response.Add(new
+                {
+                    p.PostId,
+                    p.PostTitle,
+                    p.PostContent,
+                    p.CreatedOn,
+                });
+            }
+
+            return Ok(new { response });
         }
 
         [HttpPost("NewPost")]

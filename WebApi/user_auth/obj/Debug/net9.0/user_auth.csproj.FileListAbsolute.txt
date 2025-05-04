@@ -75,4 +75,10 @@ M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\user_auth.g
 M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\ref\user_auth.dll
 M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\user_auth.staticwebassets.runtime.json
-M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\compressed\hmmdpl11e0-nrelghgkqx.gz
+M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\compressed\hmmdpl11e0-uekxv7g90i.gz
+M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\compressed\wj01ht5m8i-x3bspyqyw0.gz
+M:\My programs\dotNet\udemy course\WebApi\user_auth\obj\Debug\net9.0\compressed\8ru3645jgr-6wqg6twnxb.gz
+M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\Newtonsoft.Json.dll
+M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+M:\My programs\dotNet\udemy course\WebApi\user_auth\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll

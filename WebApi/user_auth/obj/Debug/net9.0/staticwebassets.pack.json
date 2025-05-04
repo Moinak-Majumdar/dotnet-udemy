@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\swagger\\index.html"
     },
     {
+      "Id": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\script.js",
+      "PackagePath": "staticwebassets\\swagger\\script.js"
+    },
+    {
+      "Id": "M:\\My programs\\dotNet\\udemy course\\WebApi\\user_auth\\wwwroot\\swagger\\styles.css",
+      "PackagePath": "staticwebassets\\swagger\\styles.css"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.user_auth.props",
       "PackagePath": "build\\user_auth.props"
     },
