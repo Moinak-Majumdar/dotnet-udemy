@@ -43,7 +43,7 @@ namespace user_auth.context
             return await con.ExecuteAsync(sql, param) > 0;
         }
 
-        public async Task<JsonOutput> ExecuteSp(string spName, int mode, ClaimsPrincipal user, Dictionary<string, dynamic> json)
+        public async Task<DbResponse> ExecuteSp(string spName, int mode, ClaimsPrincipal user, Dictionary<string, dynamic> json)
         {
             DbConnection con = new SqlConnection(_dbCon);
 
@@ -75,7 +75,7 @@ namespace user_auth.context
                 res = JsonConvert.SerializeObject(parsedOp!.Response);
             }
 
-            return new JsonOutput()
+            return new DbResponse()
             {
                 Id = parsedOp?.Id ?? 0,
                 StatusCode = parsedOp?.StatusCode ?? 400,
